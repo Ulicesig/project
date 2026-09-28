@@ -3,78 +3,250 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello World</title>
+  <title>Buzzd | Drink safer</title>
   <style>
-    :root {
-      color-scheme: light;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      align-items: center;
-      background: #f2efe8;
-      color: #1f2933;
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      min-height: 100vh;
-      padding: 24px;
-      transition: background-color 300ms ease;
-    }
-
-    main {
-      text-align: center;
-    }
-
-    h1 {
-      font-size: clamp(3rem, 10vw, 6rem);
-      line-height: 1;
-      margin: 0 0 32px;
-    }
-
-    button {
-      background: #1f2933;
-      border: 0;
-      border-radius: 6px;
-      color: #ffffff;
-      cursor: pointer;
-      font: 600 1rem/1.2 Arial, sans-serif;
-      padding: 14px 22px;
-      transition: background-color 180ms ease, transform 180ms ease;
-    }
-
-    button:hover {
-      background: #374151;
-      transform: translateY(-2px);
-    }
-
-    button:focus-visible {
-      outline: 3px solid #1f2933;
-      outline-offset: 4px;
-    }
-
-    button:active {
-      transform: translateY(0);
-    }
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;600;700;800&display=swap');
+    :root{--ink:#10241f;--paper:#f5f7f2;--muted:#6f7d78;--line:#dfe7df;--mint:#a8e6c5;--green:#1f7654;--orange:#ff9c57;--red:#e86658;--yellow:#f4c95d;font-family:Manrope,sans-serif}*{box-sizing:border-box}body{background:var(--paper);color:var(--ink);margin:0}button,input,select{font:inherit}button{border:0;cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--orange);outline-offset:3px}.onboarding{align-items:center;background:var(--ink);display:flex;justify-content:center;min-height:100vh;padding:20px}.onboard-card{background:var(--paper);border-radius:20px;max-width:540px;padding:clamp(28px,6vw,54px);width:100%}.logo{font-size:1.8rem;font-weight:800;letter-spacing:-1px;margin-bottom:48px}.logo span{color:var(--green)}.logo small{color:var(--muted);font-size:.65rem;font-weight:400}.eyebrow{color:var(--green);font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:1px;text-transform:uppercase}.dots{display:flex;gap:5px;margin:25px 0 30px}.dots i{background:#dce7df;border-radius:4px;height:4px;width:30px}.dots i.active{background:var(--green);width:52px}.question{font-size:clamp(1.8rem,5vw,2.6rem);letter-spacing:-1.5px;margin:0 0 7px}.intro{color:var(--muted);font-size:.85rem;line-height:1.55;margin:0}.field{display:grid;gap:7px;margin-top:26px}input,select{background:#fff;border:1px solid var(--line);border-radius:8px;color:var(--ink);min-height:46px;padding:10px;width:100%}.primary{background:var(--green);border-radius:10px;color:#fff;font-size:.86rem;font-weight:700;padding:13px 17px}.primary:hover{background:#185c41;transform:translateY(-1px)}.onboard-card .primary{margin-top:24px;width:100%}.legal{color:var(--muted);font-size:.7rem;line-height:1.5;margin:18px 0 0;text-align:center}.app{display:grid;grid-template-columns:215px 1fr;min-height:100vh}.sidebar{background:var(--ink);color:#fff;padding:28px 20px}.brand{font-size:1.45rem;font-weight:800}.brand b{background:var(--mint);border-radius:9px;color:var(--ink);display:inline-grid;font-size:.9rem;height:34px;margin-right:8px;place-items:center;transform:rotate(-8deg);width:34px}.nav{display:grid;gap:8px;margin-top:62px}.nav button{background:transparent;border-radius:10px;color:#9aaba4;padding:12px;text-align:left}.nav button.active,.nav button:hover{background:#203a32;color:white}.nav span{display:inline-block;margin-right:11px;width:18px}.side-note{color:#7d948b;font-size:.75rem;line-height:1.55;margin-top:55vh}.content{max-width:1100px;padding:30px 5vw 60px;width:100%}.topbar{align-items:center;display:flex;justify-content:space-between;margin-bottom:34px}h1{font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-2px;line-height:1;margin:8px 0}.date{color:var(--muted);font-size:.82rem}.avatar{align-items:center;background:var(--orange);border-radius:50%;display:grid;font-weight:800;height:40px;place-items:center;width:40px}.grid{display:grid;gap:18px;grid-template-columns:1.45fr 1fr}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}.status{background:var(--ink);color:#fff;min-height:245px;overflow:hidden;position:relative}.status:after{border:32px solid #27493c;border-radius:50%;content:'';height:180px;position:absolute;right:-35px;top:40px;width:180px}.status>*{position:relative;z-index:1}.bac-row{align-items:end;display:flex;gap:12px;margin:40px 0 12px}.bac{font:4.8rem/0.9 'DM Mono';letter-spacing:-5px}.bac-unit{color:#9cb5aa;font-size:.8rem;padding-bottom:4px}.status-label{color:var(--mint);font-weight:700}.status p{color:#b4c5bd;font-size:.8rem}.pace{display:flex;flex-direction:column;justify-content:space-between}.pace h2,.section h2{font-size:1.3rem;letter-spacing:-.6px;margin:5px 0}.count{color:var(--green);font-size:3.8rem;font-weight:800;letter-spacing:-3px;margin:20px 0 8px}.count small{font-size:.8rem;letter-spacing:0}.progress{background:#edf1ec;border-radius:20px;height:10px;overflow:hidden}.bar{background:var(--green);height:100%;transition:.3s;width:0}.bar.warn{background:var(--yellow)}.bar.danger{background:var(--red)}.scale{color:var(--muted);display:flex;font-size:.72rem;justify-content:space-between;margin-top:9px}.warning{background:#fff4de;border:1px solid #f2d28b;border-radius:11px;color:#76531d;display:none;font-size:.82rem;line-height:1.45;margin-top:18px;padding:13px}.warning.show{display:block}.warning strong{display:block}.section{align-items:end;display:flex;justify-content:space-between;margin:34px 0 14px}.section p{color:var(--muted);font-size:.8rem;margin:0}.drinks{display:grid;gap:10px}.drink{align-items:center;display:grid;gap:14px;grid-template-columns:42px 1fr auto auto;padding:14px 18px}.drink-icon{align-items:center;background:#fff0df;border-radius:12px;color:#c26520;display:grid;font-size:1.2rem;height:42px;place-items:center;width:42px}.drink-name{font-weight:700}.meta{color:var(--muted);font-size:.72rem;margin-top:3px}.units{font:.75rem 'DM Mono'}.remove{background:transparent;color:#a6b2ad;font-size:1.1rem}.empty{color:var(--muted);font-size:.88rem;padding:28px;text-align:center}.safety{display:flex;gap:14px}.modal-wrap{align-items:center;background:#10241fa8;display:none;inset:0;justify-content:center;padding:18px;position:fixed;z-index:5}.modal-wrap.open{display:flex}.modal{background:var(--paper);border-radius:18px;max-width:480px;padding:26px;width:100%}.modal-head{display:flex;justify-content:space-between}.close{background:transparent;color:var(--muted);font-size:1.6rem}.form-grid{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin-top:20px}.full{grid-column:1/-1}.modal .primary{margin-top:22px;width:100%}@media(max-width:700px){.app{display:block}.sidebar{align-items:center;display:flex;height:68px;justify-content:space-between;padding:14px 18px;position:sticky;top:0;z-index:3}.nav{display:flex;margin:0}.nav button{font-size:0;padding:9px}.nav span{font-size:1.1rem;margin:0}.side-note{display:none}.content{padding:24px 18px 44px}.grid{grid-template-columns:1fr}.status{min-height:220px}.section{align-items:start;gap:10px}.section .primary{font-size:0;padding:12px}.drink{grid-template-columns:42px 1fr auto}.units{display:none}.remove{grid-column:3;grid-row:1}}
   </style>
 </head>
 <body>
-  <main>
-    <h1>Hello World</h1>
-    <button id="colorButton" type="button">Change Background</button>
-  </main>
-
+  <section class="onboarding" id="onboarding"><div class="onboard-card"><div class="logo">buzz<span>d</span><small> / drink safer</small></div><div class="eyebrow" id="stepLabel">let's get to know you</div><div class="dots"><i class="active"></i><i></i><i></i><i></i></div><form id="profileForm"><div id="question"></div><button class="primary" type="submit">Continue →</button></form><p class="legal">Buzzd gives estimates for awareness, not permission to drink. Never drive after drinking.</p></div></section>
+  <main class="app" id="app" hidden><aside class="sidebar"><div class="brand"><b>b</b>buzzd</div><nav class="nav"><button class="active" type="button"><span>◉</span>Tonight</button><button type="button"><span>⌁</span>Analytics</button><button type="button"><span>⚙</span>Settings</button></nav><p class="side-note">A little awareness goes a long way. Check in with yourself often.</p></aside><section class="content"><header class="topbar"><div><div class="eyebrow">friday, september 25</div><h1>Good evening, friend.</h1><div class="date">Your personal safety snapshot</div></div><div class="avatar">B</div></header><div class="grid"><article class="card status"><div class="eyebrow" style="color:#9fe5bd">right now</div><div class="bac-row"><span class="bac" id="bac">0.00</span><span class="bac-unit">estimated<br>BAC</span></div><div class="status-label" id="status">You are clear</div><p>Estimates vary. Listen to your body.</p></article><article class="card pace"><div><div class="eyebrow">your pace</div><h2>Keep it in the green</h2><div class="count" id="count">0 <small>drinks</small></div><div class="progress"><div class="bar" id="bar"></div></div><div class="scale"><span>0 drinks</span><span>moderate zone</span></div></div><div class="warning" id="warning"><strong id="warningTitle">Slow down now</strong><span>Have water, pause, and arrange a sober ride. Do not drive.</span></div></article></div><div class="section"><div><h2>Tonight's drinks</h2><p>Track what you pour, one drink at a time.</p></div><button class="primary" id="add" type="button">＋ Add drink</button></div><div class="drinks" id="drinks"><div class="card empty">Nothing logged yet. Add your first drink when you're ready.</div></div><div class="section"><div><h2>Safety check</h2><p>Small actions make a big difference.</p></div></div><div class="card safety"><span>◷</span><div><strong>Give your body time</strong><p class="intro">Alcohol can keep absorbing after your last drink. Buzzd cannot tell you when it is safe to drive. Plan a sober ride home.</p></div></div></section></main>
+  <div class="modal-wrap" id="modal"><div class="modal"><div class="modal-head"><div><div class="eyebrow">log a drink</div><h2>What are you having?</h2></div><button class="close" id="close" type="button">×</button></div><p class="intro">We use ABV and volume to estimate standard drinks.</p><form id="drinkForm"><div class="form-grid"><div class="field full"><label for="type">Drink</label><select id="type"><option value="beer">Beer / cider</option><option value="wine">Wine</option><option value="cocktail">Cocktail</option><option value="shot">Shot / spirit</option><option value="custom">Custom</option></select></div><div class="field"><label for="volume">Volume (oz)</label><input id="volume" type="number" min=".1" step=".1" value="12" required></div><div class="field"><label for="abv">ABV (%)</label><input id="abv" type="number" min=".1" step=".1" value="5" required></div></div><button class="primary" type="submit">Log this drink</button></form></div></div>
   <script>
-    const colorButton = document.querySelector('#colorButton');
-
-    colorButton.addEventListener('click', () => {
-      const randomColor = `hsl(${Math.floor(Math.random() * 360)} 70% 82%)`;
-      document.body.style.backgroundColor = randomColor;
+    const profile={},drinks=[];let step=0;const questions=[['age','How old are you?','You must be of legal drinking age where you live.','number',21,100],['height','How tall are you?','Enter your height in feet and inches.','height'],['weight','How much do you weigh?','An estimate is okay. You can update this later.','number',70,700],['frequency','How often do you drink?','No judgment. This helps us shape useful check-ins.','select']];const question=document.querySelector('#question');function renderQuestion(){const q=questions[step];document.querySelector('#stepLabel').textContent=`question ${step+1} of 4`;document.querySelectorAll('.dots i').forEach((dot,i)=>dot.classList.toggle('active',i<=step));const control=q[3]==='height'?'<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><input id="heightFeet" type="number" min="3" max="8" placeholder="Feet" required><input id="heightInches" type="number" min="0" max="11" placeholder="Inches" required></div>':q[3]==='select'?'<select id="answer" required><option>Rarely</option><option>Sometimes</option><option>Often</option><option>Daily</option></select>':`<input id="answer" type="number" min="${q[4]}" max="${q[5]}" placeholder="Enter ${q[0]}" required>`;question.innerHTML=`<h2 class="question">${q[1]}</h2><p class="intro">${q[2]}</p><div class="field">${control}</div>`;document.querySelector(q[3]==='height'?'#heightFeet':'#answer').focus()}document.querySelector('#profileForm').addEventListener('submit',e=>{e.preventDefault();const q=questions[step];if(q[3]==='height'){const feet=Number(document.querySelector('#heightFeet').value),inches=Number(document.querySelector('#heightInches').value);if(feet<3||feet>8||inches<0||inches>11){alert('Please enter a valid height.');return}profile.height=(feet*12)+inches}else{const value=document.querySelector('#answer').value;if(q[0]==='age'&&(Number(value)<21||Number(value)>100)){alert('Please enter an age between 21 and 100.');return}profile[q[0]]=value}if(step<3){step++;renderQuestion()}else{document.querySelector('#stepLabel').textContent='your safety snapshot is ready';document.querySelector('#onboarding').hidden=true;document.querySelector('#app').hidden=false}});const presets={beer:[12,5],wine:[5,13],cocktail:[8,12],shot:[1.5,40],custom:[12,5]};document.querySelector('#type').addEventListener('change',e=>{const[v,a]=presets[e.target.value];document.querySelector('#volume').value=v;document.querySelector('#abv').value=a});document.querySelector('#add').onclick=()=>document.querySelector('#modal').classList.add('open');document.querySelector('#close').onclick=()=>document.querySelector('#modal').classList.remove('open');document.querySelector('#drinkForm').addEventListener('submit',e=>{e.preventDefault();const select=document.querySelector('#type'),volume=+document.querySelector('#volume').value,abv=+document.querySelector('#abv').value;drinks.push({name:select.options[select.selectedIndex].text,volume,abv,units:volume*abv/100/.6});document.querySelector('#modal').classList.remove('open');renderDrinks()});function renderDrinks(){document.querySelector('#drinks').innerHTML=drinks.length?drinks.map((d,i)=>`<div class="card drink"><div class="drink-icon">◓</div><div><div class="drink-name">${d.name}</div><div class="meta">${d.volume} oz · ${d.abv}% ABV</div></div><div class="units">${d.units.toFixed(1)} standard</div><button class="remove" data-i="${i}" type="button">×</button></div>`).join(''):'<div class="card empty">Nothing logged yet. Add your first drink when you\'re ready.</div>';document.querySelectorAll('.remove').forEach(b=>b.onclick=()=>{drinks.splice(+b.dataset.i,1);renderDrinks()});updateStatus()}function updateStatus(){const total=drinks.reduce((s,d)=>s+d.units,0),weight=+profile.weight||150,bac=Math.max(0,total*.6*5.14/(weight*.68)-.0225).toFixed(2);document.querySelector('#bac').textContent=bac;document.querySelector('#count').innerHTML=`${total.toFixed(1)} <small>drinks</small>`;const bar=document.querySelector('#bar');bar.style.width=`${Math.min(100,total/4*100)}%`;bar.className=`bar ${total>=3?'danger':total>=2?'warn':''}`;const warning=document.querySelector('#warning');if(total>=3||+bac>=.06){warning.classList.add('show');document.querySelector('#warningTitle').textContent=total>=4?'Please stop drinking':'Slow down now';document.querySelector('#status').textContent=+bac>=.08?'Impaired — stay put':'Take a pause';document.querySelector('#status').style.color='var(--orange)'}else{warning.classList.remove('show');document.querySelector('#status').textContent=total?'Keep checking in':'You are clear';document.querySelector('#status').style.color='var(--mint)'}}renderQuestion();
+  </script>
+  <script>
+    const drinkSectionTitle = document.querySelector('.section h2');
+    const drinkSectionCopy = drinkSectionTitle?.nextElementSibling;
+    if (drinkSectionTitle) drinkSectionTitle.textContent = 'Add drinks';
+    if (drinkSectionCopy) drinkSectionCopy.textContent = 'Log each drink by its volume and ABV.';
+    const homeHeading = document.querySelector('.topbar h1');
+    const homeSubheading = document.querySelector('.topbar .date');
+    if (homeHeading) homeHeading.textContent = 'What are you drinking tonight?';
+    if (homeSubheading) homeSubheading.textContent = 'Add a drink to start your safety snapshot';
+    const homeContent = document.querySelector('.content');
+    const addDrinksSection = document.querySelector('.section');
+    const statusGrid = document.querySelector('.grid');
+    if (homeContent && addDrinksSection && statusGrid) homeContent.insertBefore(addDrinksSection, statusGrid);
+    document.querySelector('#profileForm').addEventListener('submit', event => {
+      if (document.querySelector('#stepLabel').textContent !== 'question 4 of 4') return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      profile.frequency = document.querySelector('#answer').value;
+      document.querySelector('#stepLabel').textContent = 'your safety snapshot is ready';
+      document.querySelector('#onboarding').hidden = true;
+      document.querySelector('#app').hidden = false;
+      document.querySelector('#add')?.focus();
+    }, true);
+    const questionObserver = new MutationObserver(() => {
+      const weightInput = document.querySelector('#answer[placeholder*="weight"]');
+      if (weightInput) weightInput.placeholder = 'Weight (lbs)';
     });
+    questionObserver.observe(document.querySelector('#question'), { childList: true });
+    const beerPhoto = 'https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=160&h=160&q=80';
+    const coorsLightPhoto = 'https://www.coorslight.com/sites/coorslight/files/inline-images/COORS_LIGHT_12OZ_SKINNY_WARP_TV_AND_MEDIA_EXPORT_3_5.png';
+    const modeloPhoto = 'https://www.modelousa.com/cdn/shop/files/image141.png?v=1774622686&width=832';
+    const sierraPhoto = 'https://webadmin.sierranevada.com/wp-content/uploads/2022/10/PaleAle_12ozCan.png?w=828';
+    const stellaPhoto = 'https://cdn.builder.io/api/v1/image/assets%2Fcbbec0a153654c18ad41d632a0f7425d%2F5b5e1e66314f45f889bdc4b0aaaafe44?width=400';
+    const blueMoonPhoto = 'https://www.bluemoonbrewingcompany.com/sites/bluemoon/files/2018-05/Home-Header-SM_0.jpg';
+    const angryOrchardPhoto = 'https://www.angryorchard.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fbostonbeerc916d-bostonbeerda77-prod8a10-c798%2Fmedia%2Fproject%2Fboston-beer%2Fangry-orchard%2Fproducts%2Fcrisp-packandbtl-file.png%3Fh%3D472%26iar%3D0%26w%3D605&w=640&q=75';
+    const winePhoto = 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=160&h=160&q=80';
+    const cocktailPhoto = 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=160&h=160&q=80';
+    const catalog = [
+      { name: 'Budweiser', abv: 5, category: 'Beer', photo: beerPhoto },
+      { name: 'Bud Light', abv: 4.2, category: 'Beer', photo: beerPhoto },
+      { name: 'Coors Light', abv: 4.2, category: 'Beer', photo: coorsLightPhoto, photoCredit: 'Official Coors Light product image', photoSource: coorsLightPhoto },
+      { name: 'Miller Lite', abv: 4.2, category: 'Beer', photo: beerPhoto },
+      { name: 'Michelob Ultra', abv: 4.2, category: 'Beer', photo: beerPhoto },
+      { name: 'Corona Extra', abv: 4.6, category: 'Beer', photo: beerPhoto },
+      { name: 'Heineken', abv: 5, category: 'Beer', photo: beerPhoto },
+      { name: 'Modelo Especial', abv: 4.4, category: 'Beer', photo: modeloPhoto, photoCredit: 'Modelo Especial official product page', photoSource: 'https://www.modelousa.com/products/especial' },
+      { name: 'Stella Artois', abv: 5, category: 'Beer', photo: stellaPhoto, photoCredit: 'Stella Artois official website', photoSource: 'https://www.stellaartois.com/' },
+      { name: 'Blue Moon', abv: 5.4, category: 'Beer', photo: blueMoonPhoto, photoCredit: 'Blue Moon Brewing official website', photoSource: 'https://www.bluemoonbrewingcompany.com/' },
+      { name: 'Guinness Draught', abv: 4.2, category: 'Beer', photo: beerPhoto },
+      { name: 'Sierra Nevada Pale Ale', abv: 5.6, category: 'Beer', photo: sierraPhoto, photoCredit: 'Sierra Nevada Pale Ale product page', photoSource: 'https://sierranevada.com/beer/pale-ale/' },
+      { name: 'Angry Orchard Cider', abv: 5, category: 'Cider', photo: angryOrchardPhoto, photoCredit: 'Angry Orchard Crisp Apple product page', photoSource: 'https://www.angryorchard.com/our-ciders/core-styles/crisp-apple' },
+      { name: 'White Claw', abv: 5, category: 'Hard seltzer', photo: cocktailPhoto },
+      { name: 'Josh Cellars Cabernet', abv: 13.5, category: 'Wine', photo: winePhoto },
+      { name: 'Kim Crawford Sauvignon Blanc', abv: 13, category: 'Wine', photo: winePhoto },
+      { name: 'La Marca Prosecco', abv: 11, category: 'Wine', photo: winePhoto },
+      { name: 'Barefoot Rosé', abv: 11.5, category: 'Wine', photo: winePhoto },
+      { name: 'Margarita', abv: 13, category: 'Cocktail', photo: cocktailPhoto },
+      { name: 'Mojito', abv: 12, category: 'Cocktail', photo: cocktailPhoto },
+      { name: 'Old Fashioned', abv: 32, category: 'Cocktail', photo: cocktailPhoto },
+      { name: 'Gin & tonic', abv: 10, category: 'Cocktail', photo: cocktailPhoto },
+      { name: 'Vodka soda', abv: 10, category: 'Cocktail', photo: cocktailPhoto },
+      { name: 'Whiskey', abv: 40, category: 'Spirit', photo: cocktailPhoto },
+      { name: 'Custom drink', abv: null, category: 'Custom', photo: cocktailPhoto }
+    ];
+    const homeView = document.querySelector('.content');
+    homeView.id = 'tonightView';
+    const analyticsView = document.createElement('section');
+    analyticsView.className = 'content app-view';
+    analyticsView.id = 'analyticsView';
+    analyticsView.hidden = true;
+    analyticsView.innerHTML = `<header class="topbar"><div><div class="eyebrow">analytics · this session</div><h1>Tonight at a glance</h1><div class="date">A summary of drinks logged during this session.</div></div></header><div class="analytics-metrics"><article class="card analytics-stat"><div class="eyebrow">drinks logged</div><strong id="analyticsCount">0</strong></article><article class="card analytics-stat"><div class="eyebrow">standard drinks</div><strong id="analyticsUnits">0.0</strong></article><article class="card analytics-stat"><div class="eyebrow">average ABV</div><strong id="analyticsAbv">0%</strong></article><article class="card analytics-stat"><div class="eyebrow">drink types</div><strong id="analyticsTypes">0</strong></article></div><div class="section"><div><h2>Drink breakdown</h2><p>Standard drink estimates by entry.</p></div></div><div id="analyticsList" class="analytics-list"></div><p id="analyticsEmpty" class="card empty">No drinks logged this session yet.</p><p class="legal">Estimates are for awareness only, not permission to drink or drive.</p></section>`;
+    const settingsView = document.createElement('section');
+    settingsView.className = 'content app-view';
+    settingsView.id = 'settingsView';
+    settingsView.hidden = true;
+    settingsView.innerHTML = `<header class="topbar"><div><div class="eyebrow">settings</div><h1>Your profile</h1><div class="date">Update the details used in your estimates.</div></div></header><form id="settingsForm" class="card settings-form"><div class="field"><label for="settingsWeight">Body weight (lb)</label><input id="settingsWeight" type="number" min="70" max="700" step="1" required></div><button class="primary" type="submit">Save changes</button><p id="settingsMessage" class="settings-message" role="status"></p></form><div class="section"><div><h2>Profile details</h2><p>Collected during setup</p></div></div><dl class="card settings-details"><div><dt>Age</dt><dd id="settingsAge">Not set</dd></div><div><dt>Height</dt><dd id="settingsHeight">Not set</dd></div><div><dt>Drinking frequency</dt><dd id="settingsFrequency">Not set</dd></div></dl><article class="card safety settings-safety"><span>◷</span><div><strong>Safety first</strong><p class="intro">Buzzd provides rough estimates for awareness. It cannot tell you when it is safe to drive.</p></div></article></section>`;
+    homeView.insertAdjacentElement('afterend', analyticsView);
+    analyticsView.insertAdjacentElement('afterend', settingsView);
+    const appViews = [homeView, analyticsView, settingsView];
+    const navButtons = [...document.querySelectorAll('.nav button')];
+    function showAppView(index) {
+      appViews.forEach((view, viewIndex) => { view.hidden = viewIndex !== index; });
+      navButtons.forEach((button, buttonIndex) => {
+        button.classList.toggle('active', buttonIndex === index);
+        if (buttonIndex === index) button.setAttribute('aria-current', 'page');
+        else button.removeAttribute('aria-current');
+      });
+      if (index === 1) renderAnalytics();
+      if (index === 2) renderSettings();
+    }
+    navButtons.forEach((button, index) => button.addEventListener('click', () => showAppView(index)));
+    function renderAnalytics() {
+      const totalUnits = drinks.reduce((total, drink) => total + drink.units, 0);
+      const averageAbv = drinks.length ? drinks.reduce((total, drink) => total + drink.abv, 0) / drinks.length : 0;
+      document.querySelector('#analyticsCount').textContent = drinks.length;
+      document.querySelector('#analyticsUnits').textContent = totalUnits.toFixed(1);
+      document.querySelector('#analyticsAbv').textContent = `${averageAbv.toFixed(1)}%`;
+      document.querySelector('#analyticsTypes').textContent = new Set(drinks.map(drink => drink.category)).size;
+      document.querySelector('#analyticsEmpty').hidden = drinks.length > 0;
+      const maxUnits = Math.max(1, ...drinks.map(drink => drink.units));
+      document.querySelector('#analyticsList').innerHTML = [...drinks].reverse().map(drink => {
+        const loggedAt = new Date(drink.loggedAt).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+        const barWidth = Math.min(100, drink.units / maxUnits * 100);
+        return `<article class="card analytics-row"><img src="${drink.photo}" alt="${drink.name}" loading="lazy"><div class="analytics-row-copy"><strong>${drink.name}</strong><small>${drink.category} · ${loggedAt} · ${drink.volume} oz at ${drink.abv}% ABV</small><div class="analytics-bar"><i style="width:${barWidth}%"></i></div></div><span class="analytics-units">${drink.units.toFixed(1)}</span></article>`;
+      }).join('');
+    }
+    function renderSettings() {
+      document.querySelector('#settingsWeight').value = profile.weight || '';
+      document.querySelector('#settingsAge').textContent = profile.age ? `${profile.age} years` : 'Not set';
+      const height = Number(profile.height) || 0;
+      document.querySelector('#settingsHeight').textContent = height ? `${Math.floor(height / 12)} ft ${height % 12} in` : 'Not set';
+      document.querySelector('#settingsFrequency').textContent = profile.frequency || 'Not set';
+    }
+    document.querySelector('#settingsForm').addEventListener('submit', event => {
+      event.preventDefault();
+      profile.weight = document.querySelector('#settingsWeight').value;
+      updateStatus();
+      document.querySelector('#settingsMessage').textContent = 'Weight updated.';
+    });
+    const drinkForm = document.querySelector('#drinkForm');
+    const mobileDrinkForm = document.createElement('form');
+    mobileDrinkForm.id = 'drinkForm';
+    mobileDrinkForm.innerHTML = `<div class="field full"><label for="brandSearch">Search drinks or brands</label><input id="brandSearch" type="search" placeholder="Try Heineken, White Claw..." autocomplete="off"><div id="drinkOptions" class="catalog-options" aria-label="Drink choices"></div><input id="type" type="hidden" required></div><div class="form-grid"><div class="field"><label for="volume">How many ounces?</label><select id="volume" required><option value="1.5">1.5 oz</option><option value="5">5 oz</option><option value="8">8 oz</option><option value="12" selected>12 oz</option><option value="16">16 oz</option><option value="20">20 oz</option></select></div><div class="field"><label for="abv">ABV (%)</label><input id="abv" type="number" step="0.1" min="0.1" max="100" required></div></div><button class="primary" type="submit">Log this drink</button>`;
+    drinkForm.replaceWith(mobileDrinkForm);
+    const brandSearch = document.querySelector('#brandSearch');
+    const productSelect = document.querySelector('#type');
+    const drinkOptions = document.querySelector('#drinkOptions');
+    const abvInput = document.querySelector('#abv');
+    let selectedDrink = catalog[0];
+    function renderCatalog() {
+      const search = brandSearch.value.trim().toLowerCase();
+      const matches = catalog.filter(drink => drink.name.toLowerCase().includes(search));
+      drinkOptions.innerHTML = matches.map(drink => `<button class="catalog-option${drink === selectedDrink ? ' selected' : ''}" type="button" data-name="${drink.name}"><img src="${drink.photo}" alt="${drink.name}" loading="lazy"><span>${drink.name}<small>${drink.abv ? `${drink.abv}% ABV` : 'Enter your drink\'s ABV'}</small></span></button>`).join('') || '<p class="catalog-empty">No drinks found. Try another search.</p>';
+      if (selectedDrink.photoCredit) {
+        const credit = document.createElement('a');
+        credit.className = 'photo-attribution';
+        credit.href = selectedDrink.photoSource;
+        credit.target = '_blank';
+        credit.rel = 'noopener';
+        credit.textContent = selectedDrink.photoCredit;
+        drinkOptions.append(credit);
+      }
+      drinkOptions.querySelectorAll('.catalog-option').forEach(option => option.addEventListener('click', () => {
+        selectedDrink = catalog.find(drink => drink.name === option.dataset.name);
+        productSelect.value = selectedDrink.name;
+        syncAbv();
+        renderCatalog();
+      }));
+    }
+    function syncBrandSearch() {
+      renderCatalog();
+    }
+    function syncAbv() {
+      productSelect.value = selectedDrink.name;
+      abvInput.value = selectedDrink.abv || '';
+      abvInput.readOnly = selectedDrink.abv !== null;
+      abvInput.placeholder = selectedDrink.abv === null ? 'Enter ABV' : '';
+    }
+    brandSearch.addEventListener('input', syncBrandSearch);
+    renderCatalog();
+    mobileDrinkForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const volume = Number(document.querySelector('#volume').value);
+      const abv = Number(abvInput.value);
+      if (!selectedDrink || !volume || !abv) return;
+      drinks.push({ name: selectedDrink.name, category: selectedDrink.category, volume, abv, photo: selectedDrink.photo, photoCredit: selectedDrink.photoCredit, photoSource: selectedDrink.photoSource, loggedAt: new Date().toISOString(), units: volume * abv / 100 / .6 });
+      document.querySelector('#modal').classList.remove('open');
+      mobileDrinkForm.reset();
+      selectedDrink = catalog[0];
+      syncAbv();
+      renderCatalog();
+      renderDrinks();
+    });
+    const originalRenderDrinks = renderDrinks;
+    renderDrinks = function() {
+      originalRenderDrinks();
+      document.querySelectorAll('.drink').forEach((card, index) => {
+        const drink = drinks[index];
+        const icon = card.querySelector('.drink-icon');
+        if (drink?.photo && icon) icon.outerHTML = `<img class="drink-thumb" src="${drink.photo}" alt="${drink.name}" loading="lazy">`;
+        if (drink?.photoCredit) {
+          const credit = document.createElement('a');
+          credit.className = 'photo-attribution';
+          credit.href = drink.photoSource;
+          credit.target = '_blank';
+          credit.rel = 'noopener';
+          credit.textContent = drink.photoCredit;
+          card.querySelector('.meta')?.append(credit);
+        }
+      });
+      renderAnalytics();
+    };
+    syncAbv();
+    const mobileAppStyle = document.createElement('style');
+    mobileAppStyle.textContent = `[hidden]{display:none!important}body{background:#dce5df;overscroll-behavior-x:none;touch-action:pan-y pinch-zoom}.app{background:var(--paper);display:grid;grid-template-columns:220px minmax(0,1fr);margin:0 auto;max-width:1200px;min-height:100vh;position:relative;box-shadow:0 0 35px #10241f18}.sidebar{align-items:stretch;background:var(--ink);bottom:auto;display:block;height:100vh;left:auto;padding:28px 20px;position:sticky;top:0;transform:none;width:auto;z-index:4}.sidebar .brand{display:block}.side-note{color:#9aaba4;display:block;font-size:.75rem;line-height:1.55;margin-top:48px}.nav{display:grid;gap:8px;margin-top:48px;width:auto}.nav button{font-size:.86rem;padding:12px;text-align:left}.nav span{font-size:1rem;margin-right:11px;width:18px}.content{max-width:1100px;padding:34px clamp(24px,4vw,56px) 60px}.topbar{margin-bottom:30px}.section{margin:34px 0 14px}.grid{grid-template-columns:1.45fr 1fr}.drink{grid-template-columns:48px 1fr auto auto}.drink-thumb,.catalog-option img{aspect-ratio:1;object-fit:cover}.drink-thumb{border-radius:10px;height:48px;width:48px}.catalog-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;max-height:230px;overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y}.catalog-option{align-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;color:var(--ink);display:flex;gap:9px;min-width:0;padding:7px;text-align:left;touch-action:manipulation}.catalog-option.selected{border-color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}.catalog-option img{border-radius:6px;flex:none;height:42px;width:42px}.catalog-option span{font-size:.7rem;font-weight:700;line-height:1.2;min-width:0;overflow-wrap:anywhere}.catalog-option small{color:var(--muted);display:block;font-size:.64rem;font-weight:400;margin-top:4px}.catalog-empty{color:var(--muted);font-size:.8rem;grid-column:1/-1;padding:12px}.modal{max-height:92dvh;overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y pinch-zoom}@media(max-width:700px){.app{display:flex;flex-direction:column;height:100dvh;max-width:100%;min-height:100dvh;overflow:hidden}.sidebar{align-items:center;bottom:0;display:flex;height:72px;justify-content:center;left:0;padding:10px 16px;position:fixed;top:auto;transform:none;width:100%;z-index:4}.sidebar .brand,.side-note{display:none}.nav{display:flex;justify-content:space-around;margin:0;width:100%}.nav button{font-size:0;padding:8px 20px;text-align:center}.nav span{font-size:1.15rem;margin:0;width:auto}.content{flex:1;max-width:none;min-height:0;overflow-y:auto;overscroll-behavior-y:contain;padding:18px 16px calc(90px + env(safe-area-inset-bottom))}.topbar{margin-bottom:18px}.section{align-items:start;gap:10px;margin:20px 0 10px}.section .primary{font-size:.78rem;padding:11px 12px}.grid{grid-template-columns:1fr}.drink{grid-template-columns:42px 1fr auto}.drink-thumb{height:42px;width:42px}.units{display:none}.remove{grid-column:3;grid-row:1}.modal-wrap{align-items:flex-end;padding:0}.modal{border-radius:18px 18px 0 0;max-height:92dvh;padding:22px 18px calc(20px + env(safe-area-inset-bottom));width:100%}.catalog-options{max-height:210px}.catalog-option{gap:7px;padding:6px}.catalog-option img{height:34px;width:34px}.catalog-option span{font-size:.66rem}.catalog-option small{font-size:.6rem}}`;
+    mobileAppStyle.textContent += '.photo-attribution{color:var(--muted);display:block;font-size:.6rem;line-height:1.35;margin-top:3px;overflow-wrap:anywhere;text-decoration:underline}';
+    document.head.appendChild(mobileAppStyle);
+    const phoneFrameStyle = document.createElement('style');
+    phoneFrameStyle.textContent = `html,body{height:100%;min-height:100%;overflow:hidden}body{display:grid;place-items:center;padding:16px}.onboarding,.app{border:1px solid #cbd5ce;border-radius:24px;box-shadow:0 18px 55px #10241f26;height:min(900px,calc(100dvh - 32px));max-height:100%;min-height:0;width:min(430px,calc(100vw - 32px))}.onboarding{overflow-y:auto}.app{display:flex;flex-direction:column;max-width:none;overflow:hidden}.sidebar{align-items:center;bottom:0;display:flex;height:72px;justify-content:center;left:0;padding:10px 16px;position:absolute;top:auto;transform:none;width:100%;z-index:4}.sidebar .brand,.side-note{display:none}.nav{display:flex;justify-content:space-around;margin:0;width:100%}.nav button{font-size:0;padding:8px 20px;text-align:center}.nav span{font-size:1.15rem;margin:0;width:auto}.content{flex:1;max-width:none;min-height:0;overflow-y:auto;overscroll-behavior-y:contain;padding:18px 16px calc(90px + env(safe-area-inset-bottom))}.topbar{margin-bottom:18px}.section{align-items:start;gap:10px;margin:20px 0 10px}.grid{grid-template-columns:1fr}.drink{grid-template-columns:42px 1fr auto}.drink-thumb{height:42px;width:42px}.units{display:none}.remove{grid-column:3;grid-row:1}@media(max-width:460px){body{padding:0}.onboarding,.app{border:0;border-radius:0;height:100dvh;min-height:100dvh;width:100vw}.sidebar{position:fixed}}`;
+    document.head.appendChild(phoneFrameStyle);
+    const viewsStyle = document.createElement('style');
+    viewsStyle.textContent = `.analytics-metrics{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}.analytics-stat{padding:16px}.analytics-stat strong{display:block;font:1.55rem 'DM Mono',monospace;margin-top:8px}.analytics-list{display:grid;gap:10px}.analytics-row{align-items:center;display:grid;gap:10px;grid-template-columns:42px minmax(0,1fr) auto;padding:12px}.analytics-row img{aspect-ratio:1;border-radius:8px;height:42px;object-fit:cover;width:42px}.analytics-row-copy{min-width:0}.analytics-row-copy strong{display:block;font-size:.8rem;overflow-wrap:anywhere}.analytics-row-copy small{color:var(--muted);display:block;font-size:.65rem;line-height:1.4;margin-top:3px}.analytics-bar{background:#edf1ec;border-radius:8px;height:5px;margin-top:7px;overflow:hidden}.analytics-bar i{background:var(--green);display:block;height:100%}.analytics-units{font:.75rem 'DM Mono',monospace}.settings-form{padding:18px}.settings-form .field{margin-top:0}.settings-form .primary{margin-top:16px;width:100%}.settings-message{color:var(--green);font-size:.78rem;min-height:1.2em;margin:12px 0 0}.settings-details{display:grid;gap:0;padding:6px 18px}.settings-details div{align-items:center;border-bottom:1px solid var(--line);display:flex;gap:12px;justify-content:space-between;padding:14px 0}.settings-details div:last-child{border-bottom:0}.settings-details dt{color:var(--muted);font-size:.78rem}.settings-details dd{font-size:.78rem;font-weight:700;margin:0;text-align:right}.settings-safety{margin-top:18px}`;
+    document.head.appendChild(viewsStyle);
+    const shotOption = { name: 'Shot of liquor', abv: 40, category: 'Spirit', photo: cocktailPhoto, defaultOz: 1.5 };
+    catalog.splice(catalog.length - 1, 0, shotOption);
+    drinkOptions.addEventListener('click', event => {
+      const option = event.target.closest('.catalog-option');
+      if (!option) return;
+      const defaults = { Beer: 12, Cider: 12, 'Hard seltzer': 12, Wine: 5, Cocktail: 8, Spirit: 1.5, Custom: 12 };
+      document.querySelector('#volume').value = selectedDrink.defaultOz || defaults[selectedDrink.category] || 12;
+    });
+    const overdrinkBanner = document.createElement('aside');
+    overdrinkBanner.className = 'overdrink-banner';
+    overdrinkBanner.hidden = true;
+    overdrinkBanner.setAttribute('role', 'alert');
+    overdrinkBanner.setAttribute('aria-live', 'assertive');
+    overdrinkBanner.setAttribute('aria-atomic', 'true');
+    homeContent.querySelector('.topbar')?.insertAdjacentElement('afterend', overdrinkBanner);
+    const updateStatusWithBanner = updateStatus;
+    updateStatus = function() {
+      updateStatusWithBanner();
+      const totalUnits = drinks.reduce((total, drink) => total + drink.units, 0);
+      const estimatedBac = Number(document.querySelector('#bac').textContent);
+      const highRisk = totalUnits >= 3 || estimatedBac >= 0.06;
+      overdrinkBanner.hidden = !highRisk;
+      document.querySelector('#warningTitle').textContent = highRisk ? 'Stop drinking now' : 'Slow down now';
+      if (highRisk) overdrinkBanner.innerHTML = `<span class="overdrink-mark" aria-hidden="true">!</span><div><div class="eyebrow">High-risk drinking · ${totalUnits.toFixed(1)} standard drinks</div><h2>Stop drinking now</h2><p>Estimated BAC: ${estimatedBac.toFixed(2)}. Switch to water, stay with someone you trust, and arrange a sober ride. Never drive.</p></div>`;
+    };
+    const warningStyle = document.createElement('style');
+    warningStyle.textContent = `.overdrink-banner{align-items:flex-start;background:#ad2e28;border:2px solid #84211c;border-radius:12px;color:#fff;display:flex;gap:14px;margin:0 0 18px;padding:18px}.overdrink-banner .eyebrow{color:#ffe2d9}.overdrink-banner h2{font-size:1.25rem;margin:4px 0 6px}.overdrink-banner p{font-size:.8rem;line-height:1.45;margin:0}.overdrink-mark{align-items:center;aspect-ratio:1;background:#fff;border-radius:50%;color:#9f251e;display:grid;flex:none;font-size:1.35rem;font-weight:800;height:38px;place-items:center}`;
+    document.head.appendChild(warningStyle);
   </script>
 </body>
 </html>
